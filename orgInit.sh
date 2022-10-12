@@ -1,4 +1,4 @@
-sfdx shane:org:create -f config/project-scratch-def.json -d 1 -s --userprefix privacy -o center.demo
+sfdx shane:org:create -f config/project-scratch-def.json -d 30 -s --userprefix privacy -o center.demo
 
 # Install Privacy Center
 sfdx force:package:install --package=04t3t000002zQ6IAAU --wait 15 --noprompt
