@@ -2,6 +2,7 @@
   "orgName": "Privacy Security",
   "edition": "Developer",
   "features": ["EnableSetPasswordInApi", "PrivacyAnalytics"],
+  "adminEmail": "privacy@center.demo",
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
