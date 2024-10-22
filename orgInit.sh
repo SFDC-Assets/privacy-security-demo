@@ -1,15 +1,15 @@
-sfdx shane:org:create -f config/project-scratch-def.json -d 30 -s --userprefix privacy -o center.demo
+sf demoutil org create scratch -f config/project-scratch-def.json -d 5 -s -p privacy -e center.demo
 
 # Install Privacy Center
-sfdx force:package:install --package=04t3t000002lfh2 --wait 15 --noprompt
+sf package install --package=04t3t000002lfh2 --wait 15 --noprompt
 
-sfdx shane:user:psl -n 'Privacy Center User' -g User -l User
-sfdx force:user:permset:assign -n PrivacyCenter
+sf shane user psl -n 'Privacy Center User' -g User -l User
+sf org assign permset -n PrivacyCenter
 
-sfdx force:source:push
+sf project deploy start 
 
-sfdx shane:user:password:set -g User -l User -p salesforce1
+sf demoutil user password set -p salesforce1 -g User -l User
 
-sfdx automig:load --inputdir ./cmdt
+sf automig load --inputdir ./cmdt
 
-sfdx force:org:open
+sf org open
