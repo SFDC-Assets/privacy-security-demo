@@ -1,6 +1,7 @@
 {
   "orgName": "Privacy Security",
   "edition": "Developer",
+  "hasSampleData": "true",
   "features": ["EnableSetPasswordInApi", "PrivacyAnalytics"],
   "settings": {
     "lightningExperienceSettings": {
